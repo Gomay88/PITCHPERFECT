@@ -24,11 +24,11 @@ class PlaySoundsViewController: UIViewController {
         audioEngine = AVAudioEngine()
         
         let session = AVAudioSession.sharedInstance()
-        try! session.setCategory(AVAudioSessionCategoryPlayback)
+        try! session.setCategory(AVAudioSession.Category.playback)
         
         audioFile = try! AVAudioFile(forReading: recordedAudio.filePathUrl)
         do {
-            audioPlayer = try AVAudioPlayer(contentsOfURL: recordedAudio.filePathUrl, fileTypeHint: nil)
+            audioPlayer = try AVAudioPlayer(contentsOf: recordedAudio.filePathUrl, fileTypeHint: nil)
             audioPlayer.enableRate = true
         } catch {
             print("There was a problem with the audioPlayer")
@@ -42,19 +42,19 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func didTapSnailButton(sender: UIButton) {
-        playAudioWithVariableSpeed(0.5)
+        playAudioWithVariableSpeed(speed: 0.5)
     }
 
     @IBAction func didTapRabbitButton(sender: UIButton) {
-        playAudioWithVariableSpeed(2.0)
+        playAudioWithVariableSpeed(speed: 2.0)
     }
     
     @IBAction func didTapChipmunk(sender: UIButton) {
-        playAudioWithVariablePitch(1000)
+        playAudioWithVariablePitch(pitch: 1000)
     }
     
     @IBAction func didTapDarthvader(sender: UIButton) {
-        playAudioWithVariablePitch(-1000)
+        playAudioWithVariablePitch(pitch: -1000)
     }
     
     @IBAction func didTapStop(sender: UIButton) {
@@ -72,16 +72,16 @@ class PlaySoundsViewController: UIViewController {
         stopSoundAndReset()
         
         let audioPlayerNode = AVAudioPlayerNode()
-        audioEngine!.attachNode(audioPlayerNode)
+        audioEngine!.attach(audioPlayerNode)
         
         let changePitchEffect = AVAudioUnitTimePitch()
         changePitchEffect.pitch = pitch
-        audioEngine!.attachNode(changePitchEffect)
+        audioEngine!.attach(changePitchEffect)
         
         audioEngine!.connect(audioPlayerNode, to: changePitchEffect, format: nil)
         audioEngine!.connect(changePitchEffect, to: audioEngine!.outputNode, format: nil)
         
-        audioPlayerNode.scheduleFile(audioFile!, atTime: nil, completionHandler: nil)
+        audioPlayerNode.scheduleFile(audioFile!, at: nil, completionHandler: nil)
         try! audioEngine!.start()
         
         audioPlayerNode.play()

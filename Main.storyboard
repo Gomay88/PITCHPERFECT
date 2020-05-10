@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HAS-BZ-1ir">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HAS-BZ-1ir">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -16,31 +16,31 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cz-lX-2Ok">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="141.33333333333334" y="466" width="92.666666666666657" height="18.666666666666686"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.51656788793103448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.51656788793103448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMR-kO-Lul" userLabel="Stop">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="162.66666666666666" y="718" width="50" height="50"/>
                                 <state key="normal" image="Stop"/>
                                 <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JsN-sa-vfM"/>
+                                    <action selector="stopRecordingWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DVo-aU-0v2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfq-NO-Wfa" userLabel="Microfone">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="137.66666666666666" y="356" width="100" height="100"/>
                                 <state key="normal" image="Microfone"/>
                                 <connections>
-                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ob-p3-zEk"/>
+                                    <action selector="recordAudioWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DaY-DZ-iXo"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1cz-lX-2Ok" firstAttribute="top" secondItem="Rfq-NO-Wfa" secondAttribute="bottom" constant="10" id="3iL-Aq-re8"/>
                             <constraint firstItem="Rfq-NO-Wfa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8yq-ym-Imd"/>
@@ -101,48 +101,48 @@
                         <viewControllerLayoutGuide type="bottom" id="Ks5-0J-fph"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6UN-wu-sfx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNc-F5-oN9">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="31" y="103" width="100" height="100"/>
                                 <state key="normal" image="Snail">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapSnailButton:" destination="97k-mY-L7R" eventType="touchUpInside" id="Sc8-TI-Uvr"/>
+                                    <action selector="didTapSnailButtonWithSender:" destination="97k-mY-L7R" eventType="touchUpInside" id="8Op-RM-sRm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxd-k6-BhR">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="244" y="103" width="100" height="100"/>
                                 <state key="normal" image="Rabbit"/>
                                 <connections>
-                                    <action selector="didTapRabbitButton:" destination="97k-mY-L7R" eventType="touchUpInside" id="K20-sB-jvT"/>
+                                    <action selector="didTapRabbitButtonWithSender:" destination="97k-mY-L7R" eventType="touchUpInside" id="IGZ-Rz-D0Y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fi-dh-I8c">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="162.66666666666666" y="718" width="50" height="50"/>
                                 <state key="normal" image="Stop"/>
                                 <connections>
-                                    <action selector="didTapStop:" destination="97k-mY-L7R" eventType="touchUpInside" id="4OG-WT-eFb"/>
+                                    <action selector="didTapStopWithSender:" destination="97k-mY-L7R" eventType="touchUpInside" id="BOH-f0-t1i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="de0-1J-tV5">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="31" y="274" width="100" height="100"/>
                                 <state key="normal" image="Chipmunk"/>
                                 <connections>
-                                    <action selector="didTapChipmunk:" destination="97k-mY-L7R" eventType="touchUpInside" id="HUX-pC-o2R"/>
+                                    <action selector="didTapChipmunkWithSender:" destination="97k-mY-L7R" eventType="touchUpInside" id="Gq4-eo-8Yj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jid-ZB-ctO">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="244" y="274" width="100" height="100"/>
                                 <state key="normal" image="Darthvader"/>
                                 <connections>
-                                    <action selector="didTapDarthvader:" destination="97k-mY-L7R" eventType="touchUpInside" id="MmC-rZ-WNH"/>
+                                    <action selector="didTapDarthvaderWithSender:" destination="97k-mY-L7R" eventType="touchUpInside" id="qpP-6D-u4v"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Jid-ZB-ctO" secondAttribute="trailing" constant="15" id="HmR-os-Q1Z"/>
                             <constraint firstItem="6fi-dh-I8c" firstAttribute="centerX" secondItem="6UN-wu-sfx" secondAttribute="centerX" id="TpS-Nm-yvP"/>
@@ -168,16 +168,16 @@
                                 <exclude reference="Jid-ZB-ctO"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="oqz-TO-Mzz"/>
-                                <exclude reference="oul-kX-6sc"/>
-                                <exclude reference="Z3M-Wk-ZJW"/>
-                                <exclude reference="zgG-Ac-yRY"/>
-                                <exclude reference="U1o-Il-npg"/>
-                                <exclude reference="bJ8-Sw-jac"/>
+                                <exclude reference="Tx5-UW-gK4"/>
+                                <exclude reference="TpS-Nm-yvP"/>
                                 <exclude reference="HmR-os-Q1Z"/>
                                 <exclude reference="YdA-ql-kOi"/>
-                                <exclude reference="TpS-Nm-yvP"/>
-                                <exclude reference="Tx5-UW-gK4"/>
+                                <exclude reference="Z3M-Wk-ZJW"/>
+                                <exclude reference="zgG-Ac-yRY"/>
+                                <exclude reference="oqz-TO-Mzz"/>
+                                <exclude reference="oul-kX-6sc"/>
+                                <exclude reference="U1o-Il-npg"/>
+                                <exclude reference="bJ8-Sw-jac"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -189,16 +189,16 @@
                                 <include reference="Jid-ZB-ctO"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="oqz-TO-Mzz"/>
-                                <include reference="oul-kX-6sc"/>
-                                <include reference="Z3M-Wk-ZJW"/>
-                                <include reference="zgG-Ac-yRY"/>
-                                <include reference="U1o-Il-npg"/>
-                                <include reference="bJ8-Sw-jac"/>
+                                <include reference="Tx5-UW-gK4"/>
+                                <include reference="TpS-Nm-yvP"/>
                                 <include reference="HmR-os-Q1Z"/>
                                 <include reference="YdA-ql-kOi"/>
-                                <include reference="TpS-Nm-yvP"/>
-                                <include reference="Tx5-UW-gK4"/>
+                                <include reference="Z3M-Wk-ZJW"/>
+                                <include reference="zgG-Ac-yRY"/>
+                                <include reference="oqz-TO-Mzz"/>
+                                <include reference="oul-kX-6sc"/>
+                                <include reference="U1o-Il-npg"/>
+                                <include reference="bJ8-Sw-jac"/>
                             </mask>
                         </variation>
                     </view>
@@ -213,7 +213,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HAS-BZ-1ir" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Ga-Ai-lnL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
